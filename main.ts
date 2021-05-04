@@ -15,6 +15,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`spike`, function (sprite, loc
     pause(100)
     info.changeLifeBy(-1)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`skeldportal`, function (sprite, location) {
+    mySprite.setPosition(1000, -100)
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.setImage(img`
         . . . . . . . . . . . . . . . . 
