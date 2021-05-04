@@ -11,8 +11,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`spike`, function (sprite, location) {
-    info.changeLifeBy(-1)
     mySprite.setPosition(20, 200)
+    pause(100)
+    info.changeLifeBy(-1)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.setImage(img`
