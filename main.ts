@@ -35,6 +35,12 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f f . . f f f f . . . 
         `)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`wires`, function (sprite, location) {
+    music.zapped.play()
+    mySprite.setPosition(20, 200)
+    pause(100)
+    info.changeLifeBy(-1)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.setImage(img`
         . . . . . . . . . . . . . . . . 
@@ -57,12 +63,12 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 let jumpCounter = 0
 let mySprite: Sprite = null
+tiles.setTilemap(tilemap`level1`)
 mySprite = sprites.create(assets.image`amou`, SpriteKind.Player)
 effects.starField.startScreenEffect()
 scene.cameraFollowSprite(mySprite)
 game.splash("amogus")
 mySprite.say("sus")
-tiles.setTilemap(tilemap`level1`)
 mySprite.ay = 300
 info.setLife(5)
 mySprite.setPosition(20, 200)
