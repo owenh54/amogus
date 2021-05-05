@@ -40,7 +40,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`wires`, function (sprite, location) {
     music.zapped.play()
-    mySprite.setPosition(20, 200)
+    mySprite.setPosition(160, 200)
     pause(100)
     info.changeLifeBy(-1)
 })
