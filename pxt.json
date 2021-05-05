@@ -2,7 +2,9 @@
     "name": "amogus",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "palette": "*",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.1"
     },
     "files": [
         "main.blocks",
