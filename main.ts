@@ -64,9 +64,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f f . . f f f f . . . 
         `)
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`checkpoint1`, function (sprite, location) {
-    info.setLife(5)
-})
 let jumpCounter = 0
 let mySprite: Sprite = null
 tiles.setTilemap(tilemap`level1`)
