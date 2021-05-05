@@ -40,7 +40,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`wires`, function (sprite, location) {
     music.zapped.play()
-    mySprite.setPosition(160, 200)
+    mySprite.setPosition(1210, 50)
     pause(100)
     info.changeLifeBy(-1)
 })
@@ -63,6 +63,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f c c f . . f 2 2 f . . . 
         . . . f f f f . . f f f f . . . 
         `)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`checkpoint1`, function (sprite, location) {
+    info.setLife(5)
 })
 let jumpCounter = 0
 let mySprite: Sprite = null
