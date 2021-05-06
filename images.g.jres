@@ -29,6 +29,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "laser"
     },
+    "795^%XfN%T$t2xI^|-j)": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAPD//w8AAAAA/yIi/wAAAAAvIiLyDwAAAC8iIiL/AAAALyIiIvIPAAD/IiIiIv8AAPAvIiIi8gAA/yIiIiL/AAAvEiEi8g8AAC8SISL/AAAALyIi8g8AAAD/IiL/AAAAAPD//w8AAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "heart"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

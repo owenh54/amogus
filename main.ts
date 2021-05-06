@@ -14,9 +14,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`spike`, function (sprite, loc
     mySprite.setPosition(20, 200)
     pause(100)
     info.changeLifeBy(-1)
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`skeldportal`, function (sprite, location) {
-    mySprite.setPosition(1000, -100)
+    music.powerDown.play()
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.setImage(img`
@@ -37,6 +35,11 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f 2 2 f . . f c c f . . . 
         . . . f f f f . . f f f f . . . 
         `)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`health`, function (sprite, location) {
+    info.changeLifeBy(1)
+    music.powerUp.play()
+    tiles.setTileAt(location, assets.tile`transparency16`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`wires`, function (sprite, location) {
     music.zapped.play()
@@ -64,10 +67,15 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . f f f f . . f f f f . . . 
         `)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`skeldvent`, function (sprite, location) {
+    mySprite.setPosition(1000, -100)
+})
 let jumpCounter = 0
 let mySprite: Sprite = null
+scene.setBackgroundColor(15)
 tiles.setTilemap(tilemap`level1`)
 mySprite = sprites.create(assets.image`amou`, SpriteKind.Player)
+let mySprite2 = sprites.create(assets.tile`health`, SpriteKind.Player)
 effects.starField.startScreenEffect()
 scene.cameraFollowSprite(mySprite)
 game.splash("amogus")
